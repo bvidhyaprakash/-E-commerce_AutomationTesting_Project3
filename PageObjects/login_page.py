@@ -11,7 +11,7 @@ class LoginPages(BasePage):
     def login(self, username, password):
         self.enter_text(self.USERNAME_INPUT, username)
         self.enter_text(self.PASSWORD_INPUT, password)
-        self.click(LoginPages)
+        self.click(self.LOGIN_BUTTON)
 
     def is_login_error_displayed(self):
         return self.is_visible(self.ERROR_MESSAGE)

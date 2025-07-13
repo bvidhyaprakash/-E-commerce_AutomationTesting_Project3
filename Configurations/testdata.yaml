@@ -1,0 +1,29 @@
+steps:
+  - action: open_url
+    value: "https://www.saucedemo.com/"
+
+  - action: enter_text
+    locator: "id:user-name"
+    value: "standard_user"
+
+  - action: enter_text
+    locator: "id:password"
+    value: "secret_sauce"
+
+  - action: click
+    locator: "id:login-button"
+
+  - action: click
+    locator: "id:add-to-cart-sauce-labs-backpack"
+
+  - action: click
+    locator: "id:add-to-cart-sauce-labs-bike-light"
+
+  - action: click
+    locator: "id:shopping_cart_container"
+
+  - action: assert_text
+    locator: "class:inventory_item_name"
+    value:
+      - "Sauce Labs Backpack"
+      - "Sauce Labs Bike Light"
